@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color:;
+  color:;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: block;
+  position: fixed;
+}
