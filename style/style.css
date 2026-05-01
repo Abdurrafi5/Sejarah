@@ -85,6 +85,21 @@
   box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #bbb;
+}
+
 .placeholder-img {
   width: 100%;
   max-width: 500px;

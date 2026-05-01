@@ -7,7 +7,10 @@ document.querySelectorAll('.gallery-item img').forEach(image => {
   image.onclick = () => {
     lightbox.style.display = 'flex';
     lightboxImg.src = image.src;
-    captionText.innerHTML = image.parentElement.querySelector('figcaption').innerHTML;
+    let figcaption = image.parentElement.querySelector('figcaption');
+    if (figcaption) {
+      captionText.innerHTML = figcaption.innerHTML;
+    }
   }
 });
 
@@ -16,7 +19,7 @@ closeBtn.onclick = () => {
 };
 
 lightbox.onclick = (e) => {
-  if (e.target !== lightboxImg && e.target !== captionText) {
+  if (e.target === lightbox) {
     lightbox.style.display = 'none';
   }
 };
