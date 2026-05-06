@@ -51,17 +51,15 @@ observer.observe(heroSection);
 // Scroll animations for content cards and gallery categories
 const cards = document.querySelectorAll(".content-card");
 const categories = document.querySelectorAll(".gallery-category");
-
 cards.forEach((card, index) => {
-	if (index % 2 === 0) {
-		card.classList.add("slide-in-left");
-	} else {
-		card.classList.add("slide-in-right");
-	}
-	observer.observe(card);
+    if (index % 2 === 0) {
+        card.classList.add("slide-in-left");
+    } else {
+        card.classList.add("slide-in-right");
+    }
+    observer.observe(card);
 });
 
-categories.forEach((cat) => {
-	cat.classList.add("fade-in");
-	observer.observe(cat);
+document.querySelectorAll(".fade-in, .content-card").forEach((el) => {
+    observer.observe(el);
 });
